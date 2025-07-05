@@ -6,8 +6,8 @@ public class Airport {
     private String id;
     private String name;
     private double runwaySize;
-    private int maxFixedwingParking;
-    private int maxHelicopterParking;
+    private int maxFixedwingParkingPlace;
+    private int maxRotatedwingParkingPlace;
     private List<String> fixedwingIDs;
     private List<String> helicopterIDs;
 
@@ -16,12 +16,12 @@ public class Airport {
         helicopterIDs = new ArrayList<>();
     }
 
-    public Airport(String id, String name, double runwaySize, int maxFixedwingParking, int maxHelicopterParking) {
+    public Airport(String id, String name, double runwaySize, int maxFixedwingParkingPlace, int maxRotatedwingParkingPlace) {
         this.id = id;
         this.name = name;
         this.runwaySize = runwaySize;
-        this.maxFixedwingParking = maxFixedwingParking;
-        this.maxHelicopterParking = maxHelicopterParking;
+        this.maxFixedwingParkingPlace = maxFixedwingParkingPlace;
+        this.maxRotatedwingParkingPlace = maxRotatedwingParkingPlace;
         this.fixedwingIDs = new ArrayList<>();
         this.helicopterIDs = new ArrayList<>();
     }
@@ -50,20 +50,20 @@ public class Airport {
         this.runwaySize = runwaySize;
     }
 
-    public int getMaxFixedwingParking() {
-        return maxFixedwingParking;
+    public int getMaxFixedwingParkingPlace() {
+        return maxFixedwingParkingPlace;
     }
 
-    public void setMaxFixedwingParking(int maxFixedwingParking) {
-        this.maxFixedwingParking = maxFixedwingParking;
+    public void setMaxFixedwingParkingPlace(int maxFixedwingParkingPlace) {
+        this.maxFixedwingParkingPlace = maxFixedwingParkingPlace;
     }
 
-    public int getMaxHelicopterParking() {
-        return maxHelicopterParking;
+    public int getMaxRotatedwingParkingPlace() {
+        return maxRotatedwingParkingPlace;
     }
 
-    public void setMaxHelicopterParking(int maxHelicopterParking) {
-        this.maxHelicopterParking = maxHelicopterParking;
+    public void setMaxRotatedwingParkingPlace(int maxRotatedwingParkingPlace) {
+        this.maxRotatedwingParkingPlace = maxRotatedwingParkingPlace;
     }
 
     public List<String> getFixedwingIDs() {

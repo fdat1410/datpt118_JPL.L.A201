@@ -7,11 +7,15 @@ public class Fixedwing extends Airplane {
     public Fixedwing() {
     }
 
-    public Fixedwing(String id, String model, double cruiseSpeed, double emptyWeight, double maxTakeoffWeight,
-                     String planeType, double minNeededRunway) {
+    public Fixedwing(String id, String model, String planeType, double cruiseSpeed, double emptyWeight, double maxTakeoffWeight, double minNeededRunway) {
         super(id, model, cruiseSpeed, emptyWeight, maxTakeoffWeight);
         this.planeType = planeType;
         this.minNeededRunway = minNeededRunway;
+    }
+
+    @Override
+    public String fly() {
+        return "fixed wing";
     }
 
     public String getPlaneType() {
@@ -28,5 +32,19 @@ public class Fixedwing extends Airplane {
 
     public void setMinNeededRunway(double minNeededRunway) {
         this.minNeededRunway = minNeededRunway;
+    }
+
+    @Override
+    public String toString() {
+        return "Fixedwing{" +
+                "planeType='" + planeType + '\'' +
+                ", minNeededRunway=" + minNeededRunway +
+                ", id='" + id + '\'' +
+                ", model='" + model + '\'' +
+                ", cruiseSpeed=" + cruiseSpeed +
+                ", emptyWeight=" + emptyWeight +
+                ", maxTakeoffWeight=" + maxTakeoffWeight +
+                ", airportId='" + airportId + '\'' +
+                '}';
     }
 }

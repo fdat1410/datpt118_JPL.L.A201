@@ -6,7 +6,7 @@ public abstract class Airplane {
     protected double cruiseSpeed;
     protected double emptyWeight;
     protected double maxTakeoffWeight;
-    protected String airportID;
+    protected String airportId;
 
     public Airplane() {
     }
@@ -17,8 +17,11 @@ public abstract class Airplane {
         this.cruiseSpeed = cruiseSpeed;
         this.emptyWeight = emptyWeight;
         this.maxTakeoffWeight = maxTakeoffWeight;
-        this.airportID = null;
+        this.airportId = null;
     }
+
+    // Phương thức trừu tượng cho việc bay
+    public abstract String fly();
 
     public String getId() {
         return id;
@@ -60,11 +63,11 @@ public abstract class Airplane {
         this.maxTakeoffWeight = maxTakeoffWeight;
     }
 
-    public String getAirportID() {
-        return airportID;
+    public String getAirportId() {
+        return airportId;
     }
 
-    public void setAirportID(String airportID) {
-        this.airportID = airportID;
+    public void setAirportId(String airportId) {
+        this.airportId = airportId;
     }
 }
